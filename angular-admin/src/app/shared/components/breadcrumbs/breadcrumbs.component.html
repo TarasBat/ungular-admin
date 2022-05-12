@@ -1,0 +1,9 @@
+<div class="breadcrumbs-container">
+  <button *ngFor="let breacrumb of breadcrumbs; let i = index; let first= first; let last = last;"
+          class="breadcrumb"
+  (click)="chosen.emit(breacrumb)">
+    <ng-container >
+      {{breacrumb}} <span *ngIf="!last">></span>
+    </ng-container>
+  </button>
+</div>
